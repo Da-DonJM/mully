@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="AI for Graphic Design mentorship group finder">
+<title>AI for Graphic Design | Peer-to-Peer Mentorship</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo"><span>AI</span></div>
+    <div><h1>AI for Graphic Design</h1><p>#TheFutureWorksOnline</p></div>
+  </div>
+  <div class="status"><span class="dot"></span> Peer-to-Peer Mentorship</div>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">PEER-TO-PEER MENTORSHIP</div>
+      <h2>Find Your <span>Mentorship Group</span></h2>
+      <p class="intro">Enter your name or phone number. If you search by name, we will first confirm your full registered name before showing your group.</p>
+    </div>
+
+    <div class="finder-card">
+      <form id="groupForm" novalidate>
+        <label for="searchInput">Enter your name or phone number</label>
+        <div class="search-wrap">
+          <div class="input-icon">⌕</div>
+          <input id="searchInput" type="text" placeholder="e.g. John, John Kamau, or 0712345678" autocomplete="off" aria-describedby="searchHint">
+          <button id="findButton" type="submit">Find My Group <span>→</span></button>
+        </div>
+        <p id="searchHint" class="hint">You can enter one name, several names, or your full name. Name order does not matter.</p>
+      </form>
+
+      <div id="message" class="message" aria-live="polite"></div>
+
+      <div id="confirmation" class="confirmation hidden" aria-live="polite">
+        <div class="confirm-icon">?</div>
+        <div class="confirm-content">
+          <div class="result-label">PLEASE CONFIRM YOUR NAME</div>
+          <h3>Is this your full name?</h3>
+          <div id="fullName" class="full-name"></div>
+          <p class="confirm-note">Please confirm that this is the name you used during registration.</p>
+          <div class="confirm-actions">
+            <button id="confirmButton" class="btn-primary" type="button">Yes, that's me <span>✓</span></button>
+            <button id="tryAgainButton" class="btn-secondary" type="button">No, try again</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="choices" class="choices hidden" aria-live="polite">
+        <div class="choices-head">
+          <div><div class="result-label">MULTIPLE MATCHES</div><h3>Select your full name</h3></div>
+          <span class="choice-count" id="choiceCount"></span>
+        </div>
+        <p>We found more than one registered participant matching your search. Select your name to confirm it.</p>
+        <div id="choiceList" class="choice-list"></div>
+      </div>
+
+      <div id="result" class="result hidden" aria-live="polite">
+        <div class="check">✓</div>
+        <div class="result-main">
+          <div class="result-label">YOUR ASSIGNED GROUP</div>
+          <h3 id="groupTitle"></h3>
+          <p>Confirmed participant:</p>
+          <strong id="confirmedName"></strong>
+          <div class="group-name-wrap"><span>You belong to</span><b id="groupName"></b></div>
+          <a id="whatsappButton" class="whatsapp" target="_blank" rel="noopener noreferrer"><span>◉</span> Join WhatsApp Group <span>↗</span></a>
+          <button id="newSearchButton" class="new-search" type="button">← Search another participant</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="groups">
+    <div class="section-title"><span>OUR GROUPS</span><h3>Mentorship communities</h3><p>After confirming your registered name, you will be directed to the correct WhatsApp group.</p></div>
+    <div class="group-grid">
+      <article class="group-card"><div class="number">01</div><div><h4>Singapore</h4><p>Group 1</p></div><span class="arrow">↗</span></article>
+      <article class="group-card"><div class="number">02</div><div><h4>Lions</h4><p>Group 2</p></div><span class="arrow">↗</span></article>
+      <article class="group-card"><div class="number">03</div><div><h4>Kempiski</h4><p>Group 3</p></div><span class="arrow">↗</span></article>
+    </div>
+  </section>
+</main>
+
+<footer><div><strong>AI for Graphic Design</strong><span>#TheFutureWorksOnline</span></div><p>© 2026 Peer-to-Peer Mentorship</p></footer>
+<script src="action.js"></script>
+</body>
+</html>
